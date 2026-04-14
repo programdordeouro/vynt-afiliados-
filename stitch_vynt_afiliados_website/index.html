@@ -349,17 +349,13 @@
     function handleFormSubmit(event) {
         event.preventDefault();
         const btn = event.target.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
         
-        btn.textContent = 'Enviando...';
+        btn.textContent = 'Acessando Plataforma...';
         btn.classList.add('opacity-80', 'cursor-not-allowed');
         
         setTimeout(() => {
-            alert('Cadastro realizado com sucesso! Verifique seu email para receber o convite.');
-            event.target.reset();
-            btn.textContent = originalText;
-            btn.classList.remove('opacity-80', 'cursor-not-allowed');
-        }, 1500);
+            window.location.href = 'dashboard.html';
+        }, 1000);
     }
 </script>
 </body></html>

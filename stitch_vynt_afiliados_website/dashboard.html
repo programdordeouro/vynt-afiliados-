@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>VYNT - Painel do Afiliado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "on-primary-fixed-variant": "#0d6200",
+                        "outline-variant": "#494847",
+                        "surface-container-highest": "#262626",
+                        "primary-fixed-dim": "#2be800",
+                        "inverse-primary": "#106f00",
+                        "on-secondary-container": "#e4ffe2",
+                        "secondary": "#90f9a3",
+                        "on-background": "#ffffff",
+                        "inverse-on-surface": "#565554",
+                        "on-secondary": "#005f28",
+                        "tertiary-fixed": "#17eefa",
+                        "surface-variant": "#262626",
+                        "error-dim": "#d53d18",
+                        "on-tertiary-container": "#005458",
+                        "background": "#0e0e0e",
+                        "inverse-surface": "#fcf8f8",
+                        "primary-container": "#2ff801",
+                        "surface-tint": "#8eff71",
+                        "on-primary-fixed": "#064200",
+                        "primary-fixed": "#2ff801",
+                        "on-error-container": "#ffd2c8",
+                        "surface-container-high": "#201f1f",
+                        "tertiary-container": "#17eefa",
+                        "on-surface": "#ffffff",
+                        "secondary-fixed": "#90f9a3",
+                        "surface-bright": "#2c2c2c",
+                        "secondary-fixed-dim": "#82ea96",
+                        "surface": "#0e0e0e",
+                        "error": "#ff7351",
+                        "primary-dim": "#2be800",
+                        "surface-container-low": "#131313",
+                        "primary": "#8eff71",
+                        "on-tertiary": "#005d62",
+                        "on-secondary-fixed": "#004a1e",
+                        "on-tertiary-fixed": "#003f43",
+                        "tertiary-fixed-dim": "#00deea",
+                        "on-primary": "#0d6100",
+                        "surface-dim": "#0e0e0e",
+                        "on-surface-variant": "#adaaaa",
+                        "secondary-dim": "#82ea96",
+                        "outline": "#777575",
+                        "surface-container-lowest": "#000000",
+                        "error-container": "#b92902",
+                        "on-primary-container": "#0b5800",
+                        "secondary-container": "#006d2f",
+                        "on-tertiary-fixed-variant": "#005e63",
+                        "surface-container": "#1a1919",
+                        "on-error": "#450900",
+                        "tertiary": "#88f6ff",
+                        "tertiary-dim": "#00deea",
+                        "on-secondary-fixed-variant": "#006a2e"
+                },
+                "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                }
+              },
+            },
+          }
+    </script>
+    <style>
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden min-h-screen flex flex-col">
+
+<!-- Nav -->
+<nav class="w-full z-50 bg-surface-container-low border-b border-white/5 px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-black text-white tracking-[-0.04em]">VYNT <span class="text-primary font-label text-xs uppercase tracking-widest ml-2">Painel</span></div>
+    <div class="flex items-center gap-3">
+        <span class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest">Acesso Aprovado</span>
+        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold border border-primary/20">
+            <span class="material-symbols-outlined text-sm">person</span>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-1 max-w-6xl mx-auto w-full p-6 py-12 space-y-12">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+            <div class="inline-flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-4">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="font-label text-[10px] text-primary font-bold tracking-widest uppercase">Sistema Online</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-2">Bem-vindo à <span class="text-primary">Engrenagem</span></h1>
+            <p class="text-on-surface-variant text-lg">Este é o seu centro de comando. Foque em enviar leads. Nós fechamos.</p>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface-container pb-6 pt-8 px-6 rounded-2xl border-t-2 border-primary/30 relative overflow-hidden shadow-2xl">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Seus Ganhos (USD)</p>
+            <p class="text-4xl font-black text-white">$0.00</p>
+        </div>
+        <div class="bg-surface-container-high pb-6 pt-8 px-6 rounded-2xl">
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Clientes Convertidos</p>
+            <p class="text-4xl font-black text-white">0</p>
+        </div>
+        <div class="bg-surface-container-high pb-6 pt-8 px-6 rounded-2xl">
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Leads Pendentes (Em negociação)</p>
+            <p class="text-4xl font-black text-white">0</p>
+        </div>
+    </div>
+
+    <!-- Workflow Instruction -->
+    <div class="bg-gradient-to-br from-surface-container-highest to-surface-container p-8 rounded-3xl border border-white/5 relative overflow-hidden shadow-2xl">
+        <div class="absolute right-0 top-0 opacity-5 pointer-events-none translate-x-1/4 -translate-y-1/4">
+            <span class="material-symbols-outlined text-[300px]" data-icon="rocket_launch">rocket_launch</span>
+        </div>
+        
+        <div class="relative z-10 flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between">
+            <div class="max-w-2xl">
+                <h2 class="text-2xl font-black mb-4">Como repassar clientes e receber comissões?</h2>
+                <div class="space-y-4 text-on-surface-variant text-base leading-relaxed">
+                    <p>
+                        Seu único trabalho é <strong>gerar interesse</strong> usando as mensagens persuasivas abaixo.
+                    </p>
+                    <p>
+                        Quando a pessoa responder interessada, diga que um arquiteto de automação vai entrar em contato para agendar uma call. Em seguida, <strong>mande o contato desse cliente imediatamente para mim no WhatsApp</strong> abaixo.
+                    </p>
+                    <p class="text-white/80 font-medium">
+                        Eu realizo o alinhamento, fecho a venda e faço o repasse do dinheiro para a sua conta.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="shrink-0 bg-surface-container-lowest p-6 rounded-2xl w-full lg:w-auto border border-primary/10 flex flex-col items-center lg:items-start">
+                <div class="font-label text-xs uppercase tracking-widest text-on-surface/50 mb-2">Contato Master para Repasse</div>
+                <div class="text-2xl md:text-3xl font-black text-primary tracking-wider mb-6">080 9350 6106</div>
+                <a href="https://api.whatsapp.com/send?phone=818093506106" target="_blank" class="w-full text-center bg-primary text-on-primary font-black px-8 py-4 rounded-xl hover:scale-105 hover:bg-primary-dim transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(142,255,113,0.2)]">
+                    Mandar Lead no WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <div class="space-y-8">
+        <div class="border-b border-white/10 pb-4">
+            <h3 class="text-2xl font-black tracking-tight">Arsenal de Vendas (Scripts)</h3>
+            <p class="text-on-surface-variant mt-2">Mensagens persuasivas desenhadas por Inteligência Artificial para gerar alto índice de resposta. Copie, cole nas suas redes ou e-mails, e repasse os interessados.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- PT -->
+            <div class="bg-surface-container-high p-8 rounded-2xl flex flex-col border border-white/5 hover:border-primary/20 transition-colors group">
+                <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                    <div class="bg-surface px-3 py-1.5 rounded font-label text-[10px] font-bold uppercase tracking-widest text-white">Versão: Português</div>
+                    <button onclick="copyScript(this, 'script-pt')" class="text-primary hover:text-white transition-colors flex items-center gap-1.5 text-[10px] font-label font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">content_copy</span> <span class="btn-text">Copiar</span>
+                    </button>
+                </div>
+                <div class="text-sm text-on-surface-variant leading-relaxed flex-1 space-y-5" id="script-pt">
+                    <p>Você já parou para pensar quanto tempo e dinheiro sua operação perde diariamente com processos manuais e repetitivos?</p>
+                    <p>A <strong>VYNT</strong> é uma estrutura completa de automação com Inteligência Artificial que trabalha 24/7 pelo seu negócio. Nós redesenhamos arquiteturas corporativas para cortar ineficiências e escalar vendas de forma automática, sem que você precise contratar mais pessoas.</p>
+                    <p>Vamos agendar uma call rápida para eu te mostrar como a nossa tecnologia pode cortar os custos operacionais da sua empresa e plugar um motor de lucro automático?</p>
+                </div>
+            </div>
+
+            <!-- EN -->
+            <div class="bg-surface-container-high p-8 rounded-2xl flex flex-col border border-white/5 hover:border-primary/20 transition-colors group">
+                <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                    <div class="bg-surface px-3 py-1.5 rounded font-label text-[10px] font-bold uppercase tracking-widest text-white">Versão: Inglês</div>
+                    <button onclick="copyScript(this, 'script-en')" class="text-primary hover:text-white transition-colors flex items-center gap-1.5 text-[10px] font-label font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">content_copy</span> <span class="btn-text">Copiar</span>
+                    </button>
+                </div>
+                <div class="text-sm text-on-surface-variant leading-relaxed flex-1 space-y-5" id="script-en">
+                    <p>Have you ever calculated how much time and revenue your operation loses daily to manual, repetitive processes?</p>
+                    <p><strong>VYNT</strong> is an end-to-end AI automation infrastructure that works 24/7 for your business. We redesign corporate architectures to eliminate inefficiencies and unconditionally scale sales automatically, without the need to increase operations headcount.</p>
+                    <p>Let's schedule a brief 10-minute call so I can show you exactly how our technology cuts operational costs and installs an automated revenue engine right in your company. Are you available this week?</p>
+                </div>
+            </div>
+
+            <!-- JP -->
+            <div class="bg-surface-container-high p-8 rounded-2xl flex flex-col border border-white/5 hover:border-primary/20 transition-colors group">
+                <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                    <div class="bg-surface px-3 py-1.5 rounded font-label text-[10px] font-bold uppercase tracking-widest text-white">Versão: Japonês</div>
+                    <button onclick="copyScript(this, 'script-jp')" class="text-primary hover:text-white transition-colors flex items-center gap-1.5 text-[10px] font-label font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">content_copy</span> <span class="btn-text">Copiar</span>
+                    </button>
+                </div>
+                <div class="text-sm text-on-surface-variant leading-relaxed flex-1 space-y-5" id="script-jp">
+                    <p>手作業によるプロセスで、毎日どれだけの時間と利益を失っているか計算したことはありますか？</p>
+                    <p><strong>VYNT（ヴィント）</strong>は、24時間365日貴社の代わりに休まず稼働する、最新のAI完全自動化インフラストラクチャーです。私たちは企業のシステム構造を再設計し、人員を増やすことなく非効率を排除し、売上を自動的に劇的にスケールさせます。</p>
+                    <p>当社のAIテクノロジーがいかに運用コストを削減し、自動収益エンジンを構築できるか、一度簡単にお話しするお時間をいただけませんか？</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function copyScript(btnElement, textElementId) {
+        const container = document.getElementById(textElementId);
+        const paragraphs = container.querySelectorAll('p');
+        let fullText = Array.from(paragraphs).map(p => p.innerText).join('\n\n');
+        
+        navigator.clipboard.writeText(fullText).then(() => {
+            const originalIcon = btnElement.innerHTML;
+            
+            // Temporary success state
+            btnElement.innerHTML = `<span class="material-symbols-outlined text-sm">check</span> <span class="btn-text">Copiado</span>`;
+            btnElement.classList.replace('text-primary', 'text-white');
+            
+            setTimeout(() => {
+                btnElement.innerHTML = originalIcon;
+                btnElement.classList.replace('text-white', 'text-primary');
+            }, 2000);
+            
+        }).catch(err => {
+            console.error('Erro ao copiar', err);
+            alert('Não foi possível copiar. Tente selecionar o texto manualmente.');
+        });
+    }
+</script>
+
+</body>
+</html>
